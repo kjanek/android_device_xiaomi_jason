@@ -53,7 +53,7 @@ LOCAL_CFLAGS += -include bionic/libc/kernel/common/linux/socket.h
 LOCAL_CFLAGS += -include bionic/libc/kernel/common/linux/un.h
 endif
 
-LOCAL_CFLAGS += -Wall -Wextra -Werror
+LOCAL_CFLAGS += -Wall -Wextra -Wno-compound-token-split-by-macro
 ifeq ($(TARGET_KERNEL_VERSION), 4.9)
 LOCAL_CFLAGS += -DUSE_4_9_DEFS
 endif
