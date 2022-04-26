@@ -21,6 +21,19 @@ function blob_fixup() {
         vendor/lib/libmpbase.so)
             "${PATCHELF}" --remove-needed "libandroid.so" "${2}"
             ;;
+	vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so)
+            hexdump -ve '1/1 "%.2X"' "${2}" | sed "s/8D0A0094AE1640F9/1F2003D5AE1640F9/g" | xxd -r -p > "${TMPDIR}/${1##*/}"
+            mv "${TMPDIR}/${1##*/}" "${2}"
+            ;;
+        vendor/lib64/hw/camera.xiaomi.so)
+            # Before
+            # 21 00 80 52     mov        w1,#0x1
+            # 29 07 00 94     bl         <EXTERNAL>::android::hardware::configureRpcThr
+            # After
+            # 21 00 80 52     mov        w1,#0x1
+            # 1f 20 03 d5     nop
+            sed -i "s/\x21\x00\x80\x52\x29\x07\x00\x94/\x21\x00\x80\x52\x1f\x20\x03\xd5/g" "${2}"
+            ;;
     esac
 }
 
