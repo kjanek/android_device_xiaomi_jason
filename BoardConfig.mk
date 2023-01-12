@@ -26,6 +26,9 @@ include device/xiaomi/sdm660-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/xiaomi/jason
 
+# Build
+BUILD_BROKEN_DUP_RULES := true
+
 # Kernel
 TARGET_KERNEL_CONFIG := jason_defconfig
 TARGET_KERNEL_VERSION := 4.4
