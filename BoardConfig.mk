@@ -26,6 +26,9 @@ include device/xiaomi/sdm660-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/xiaomi/jason
 
+# Sepolicy
+SELINUX_IGNORE_NEVERALLOWS := true
+
 # Build
 BUILD_BROKEN_DUP_RULES := true
 
