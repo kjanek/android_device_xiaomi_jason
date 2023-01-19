@@ -104,8 +104,8 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-service
 
 # HW crypto
-PRODUCT_PACKAGES += \
-    vendor.qti.hardware.cryptfshw@1.0-service-qti.qsee
+#PRODUCT_PACKAGES += \
+#    vendor.qti.hardware.cryptfshw@1.0-service-qti.qsee
 
 # Keymaster HAL
 PRODUCT_PACKAGES += \
@@ -118,19 +118,9 @@ PRODUCT_PACKAGES += \
 
 # NFC
 PRODUCT_PACKAGES += \
-    NQNfcNci \
-    libnqnfc-nci \
-    libnqnfc_nci_jni \
-    nfc_nci.nqx.default \
     libp61-jcop-kit \
-    com.nxp.nfc.nq \
-    com.nxp.nfc.nq.xml \
-    nqnfcee_access.xml \
-    nqnfcse_access.xml \
     Tag \
-    com.android.nfc_extras \
-    vendor.nxp.hardware.nfc@2.0-service \
-    nfc_nci.nqx.default.hw
+    com.android.nfc_extras
 
 PRODUCT_SOONG_NAMESPACES += vendor/nxp/opensource/pn5xx
 
