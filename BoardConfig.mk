@@ -31,6 +31,7 @@ SELINUX_IGNORE_NEVERALLOWS := true
 
 # Build
 BUILD_BROKEN_DUP_RULES := true
+TARGET_KERNEL_OPTIONAL_LD := true
 
 # Kernel
 TARGET_KERNEL_CONFIG := jason_defconfig
