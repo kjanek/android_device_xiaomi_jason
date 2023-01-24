@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_jason.mk
+    $(LOCAL_DIR)/tequila_jason.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_jason-user \
-    lineage_jason-userdebug \
-    lineage_jason-eng
+    tequila_jason-user \
+    tequila_jason-userdebug \
+    tequila_jason-eng
