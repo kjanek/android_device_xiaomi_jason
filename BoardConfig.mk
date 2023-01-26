@@ -35,6 +35,7 @@ BUILD_BROKEN_DUP_RULES := true
 # Kernel
 TARGET_KERNEL_CONFIG := jason_defconfig
 TARGET_KERNEL_VERSION := 4.4
+KERNEL_LD := LD=ld.lld
 
 # Camera
 BOARD_QTI_CAMERA_32BIT_ONLY := true
