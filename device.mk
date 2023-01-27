@@ -149,10 +149,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.hardware.nfc_nci=nqx.default
 
-# Pocket mode
-PRODUCT_PACKAGES += \
-    XiaomiPocketMode
-
 # Ramdisk
 PRODUCT_PACKAGES += \
     init.panel_info.sh \
